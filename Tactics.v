@@ -124,7 +124,7 @@ Ltac simplify :=
           match goal with 
           |[H: True |- _] => clear H
           |[H: ?x <> ?x |- _] => exfalso; apply H; reflexivity
-          |[|- ?P /\ ?Q] => try (solve [split; eauto 2] || (split; eauto 2; [idtac]))
+          |[|- ?P /\ ?Q] => try (solve [split; eauto 2] || (split; eauto 2; [idtac])); fail
           |[H: ?P /\ ?Q |- _] => invert H
           |[a: ?x * ?y |- _] => destruct a
 end).
