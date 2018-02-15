@@ -103,7 +103,40 @@ Hint Extern 5 => match goal with
                 |[H : RR (forall _ _ _ _ _ _ _, _ = _) |- _] =>
                  progress (rewrite (unRR H) in *) 
                 end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
+Hint Extern 5 => match goal with
+                |[H : RR (forall _ _ _ _ _ _ _ _ _ _ _ _ _ _ _, _ = _) |- _] =>
+                 progress (rewrite (unRR H) in *) 
+                end.
 
+                           
 Inductive AutoSimpl : Prop :=
 | auto_simpl : AutoSimpl.
 
