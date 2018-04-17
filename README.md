@@ -34,6 +34,18 @@ hint_simpl
 Ask proof automation to try running `simpl` (not sure how well this works yet).
 
 ```
+hint_congruence
+```
+
+Ask proof automation to try running `congruence` (not sure how well this works yet).
+
+```
+hint_reflexivity
+```
+
+Ask proof automation to try running `reflexivity` (not sure how well this works yet).
+
+```
 iauto/iauto'
 ```
 

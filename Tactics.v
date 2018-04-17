@@ -139,15 +139,32 @@ Hint Extern 5 => match goal with
                            
 Inductive AutoSimpl : Prop :=
 | auto_simpl : AutoSimpl.
-
 Tactic Notation "hint_simpl" := 
   let H := fresh "Hint" in
-  assert (H : AutoSimpl) by (exact auto_simpl).
-
-                           
+  assert (H : AutoSimpl) by (exact auto_simpl).                           
 Hint Extern 5 => match goal with
                 |[H : AutoSimpl |- _] =>
                  progress (simpl in *) 
+                end.
+                           
+Inductive AutoCongruence : Prop :=
+| auto_congruence : AutoCongruence.
+Tactic Notation "hint_congruence" := 
+  let H := fresh "Hint" in
+  assert (H : AutoCongruence) by (exact auto_congruence).
+Hint Extern 5 => match goal with
+                |[H : AutoCongruence |- _] =>
+                 progress congruence
+                end.
+
+Inductive AutoReflexivity : Prop :=
+| auto_reflexivity : AutoReflexivity.
+Tactic Notation "hint_reflexivity" := 
+  let H := fresh "Hint" in
+  assert (H : AutoReflexivity) by (exact auto_reflexivity).
+Hint Extern 5 => match goal with
+                |[H : AutoReflexivity |- _] =>
+                 reflexivity
                 end.
 
                            
